@@ -7,7 +7,7 @@
       "properties": {
         "lotID": {
           "title": "Award criterion lot identifiers",
-          "description": "Identifiers of the lots or groups of lots to which this criterion applies.",
+          "description": "Identifiers of the lots or groups of lots to which this criterion applies. If empty, criteria apply to all lots.",
           "type": [
             "array",
             "null"
@@ -54,7 +54,7 @@
             "string",
             "null"
           ],
-          "codelist": "awardCriteria.csv",
+          "codelist": "criterionType.csv",
           "openCodelist": true
         },
         "criterionName": {
