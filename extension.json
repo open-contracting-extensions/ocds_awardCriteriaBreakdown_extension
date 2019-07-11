@@ -1,0 +1,20 @@
+{
+  "name": {
+    "en": "EU weighted criteria"
+  },
+  "description": {
+    "en": "This extension aims primarily at supporting criteria data formatted according to eForms data structure, but it also aims at enabling the OCDS publication of TED v2.0.9 data."
+  },
+  "documentationUrl": {
+    "en": "https://github.com/open-contracting-extensions/ocds_eu_criteria"
+  },
+  "compatibility": [
+    "1.1"
+  ],
+  "schemas": [
+    "release-schema.json"
+  ],
+  "codelists": [
+    "awardCriteria.csv"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "definitions": {
+    "AwardWeightedCriteria": {
+      "type": "object",
+      "title": "Award weighted criteria",
+      "description": "A weighted criterion as defined in eForms BG-707 and compatible with TED 2.0.9.",
+      "properties": {
+        "lotID": {
+          "title": "Award criterion lot identifiers",
+          "description": "Identifiers of the lots or groups of lots to which this criterion applies.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "awardCriteriaComplicated": {
+          "title": "Award criteria complicated",
+          "description": "When the weighing cannot be explained per criterion, a mathematical equation or any other description can be used to explain the weighing of the criteria.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "awardCriteriaOrderJustification": {
+          "title": "Award criteria order justification",
+          "description": "Justification for only indicating the award criteria's order of importance, not their weighing.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "awardWeightedCriteria": {
+          "type": "array",
+          "description": "List of the criteria that applies to the selected lots or groups of lots",
+          "title": "Award weighted criteria",
+          "items": {
+            "$ref": "#/definitions/AwardWeightedCriterion"
+          }
+        }
+      }
+    },
+    "AwardWeightedCriterion": {
+      "title": "Award weighted criterion",
+      "description": "An award criterion that applies to a lot or group of lots, and that has weighing information.",
+      "type": "object",
+      "properties": {
+        "criterionType": {
+          "title": "Criterion type",
+          "description": "The aspect of the offer that is concerned by the criterion. It uses the open [awardCriteria](https://standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardCriteria.csv",
+          "openCodelist": true
+        },
+        "criterionName": {
+          "title": "Criterion name",
+          "description": "Name of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criterionDescription": {
+          "title": "Criterion description",
+          "description": "Description of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criterionNumber": {
+          "title": "Criterion number",
+          "description": "Number of the criterion and meaning of the number.",
+          "type": "object",
+          "$ref": "#/definitions/AwardWeightedCriterionNumber"
+        }
+      }
+    },
+    "AwardWeightedCriterionNumber": {
+      "title": "Award criterion number",
+      "description": "The number that qualifies the weight of the criterion and its meaning.",
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Number",
+          "description": "The number that qualifies the weight or priority of the criterion.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "meaning": {
+          "title": "Meaning",
+          "description": "The meaning of the number that qualifies the weight or priority of the criterion.",
+          "codelist": "",
+          "openCodelist": false
+        }
+      }
+    },
+    "Tender": {
+      "properties": {
+        "awardWeightedCriteriaPerLot": {
+          "title": "Award weighted criteria per lot",
+          "description": "A list of weighted criteria as defined in eForms BG-707 and compatible with TED 2.0.9.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AwardWeightedCriteria"
+          }
+        }
+      }
+    }
+  }
+}
