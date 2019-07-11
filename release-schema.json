@@ -18,7 +18,7 @@
         },
         "awardCriteriaComplicated": {
           "title": "Award criteria complicated",
-          "description": "When the weighing cannot be explained per criterion, a mathematical equation or any other description can be used to explain the weighing of the criteria.",
+          "description": "When the weighting cannot be explained per criterion, a mathematical equation or any other description can be used to explain the weighting of the criteria.",
           "type": [
             "string",
             "null"
@@ -26,7 +26,7 @@
         },
         "awardCriteriaOrderJustification": {
           "title": "Award criteria order justification",
-          "description": "Justification for only indicating the award criteria's order of importance, not their weighing.",
+          "description": "Justification for only indicating the award criteria's order of importance, not their weighting.",
           "type": [
             "string",
             "null"
@@ -44,7 +44,7 @@
     },
     "AwardWeightedCriterion": {
       "title": "Award weighted criterion",
-      "description": "An award criterion that applies to a lot or group of lots, and that has weighing information.",
+      "description": "An award criterion that applies to a lot or group of lots, and that has weighting information.",
       "type": "object",
       "properties": {
         "criterionType": {
