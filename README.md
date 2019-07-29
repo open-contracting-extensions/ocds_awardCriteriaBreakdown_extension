@@ -1,53 +1,56 @@
-# Award weighted criteria extension for EU data
+# Award criteria breakdown
 
-> OCDS extension to describe criteria as expressed in eForms (BG-707) and compatible with TED
+Adds an award criteria breakdown array to the tender object, to break down award criteria by price, cost and quality.
 
-This extension aims primarily at supporting criteria data formatted according to eForms data structure, but it also aims at enabling the OCDS publication of TED v2.0.9 data.
+## Legal context
 
-## Guidance for TED mapping
+In the European Union, this extension's fields correspond to [eForms BG-707 (Award Criteria)](https://github.com/eForms/eForms). See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
 
-If only `AC_QUALITY` is set,  set `tender.awardCriteria` to "qualityOnly".
+[Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj) [Article 67](https://eur-lex.europa.eu/eli/dir/2014/24/oj#d1e5950-65-1)(5) describes weightings and orders of importance.
 
-If only `AC_COST` is set, set `tender.awardCriteria` to "costOnly".
+## Example
 
-If only `AC_PRICE` is set, set `tender.awardCriteria` to "priceOnly".
+```json
+{
+  "tender": {
+    "awardCriteriaBreakdown": [
+      {
+        "relatedLots": [
+          "1",
+          "2"
+        ],
+        "awardCriteria": [
+          {
+            "type": "quality",
+            "name": "Service quality",
+            "numbers": [
+              {
+                "number": 50,
+                "weight": "percentageExact"
+              }
+            ]
+          },
+          {
+            "type": "price",
+            "name": "Price",
+            "numbers": [
+              {
+                "number": 50,
+                "weight": "percentageExact"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
-If a mix of `AC_QUALITY`, `AC_COST` and `AC_PRICE` is set, set `tender.awardCriteria` to "ratedCriteria".
+## Issues
 
-Add an `AwardWeightedCriteria` object to the `tender.awardWeightedCriteriaPerLot` array.
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
-Set the `AwardWeightedCriteria` object as follow:
+## Changelog
 
-**AC_QUALITY**
-
-Add an `AwardWeightedCriterion` object to the `awardWeightedCriteria` array.
-
-Map `AC_CRITERION` to `criterionName`.
-
-Map `AC_WEIGHTING` to `criterionDescription`.
-
-Set `criterionType` to "quality".
-
-**AC_COST**
-
-Add an `AwardWeightedCriterion` object to the `awardWeightedCriteria` array.
-
-Map `AC_CRITERION` to `criterionName`.
-
-Map `AC_WEIGHTING` to `criterionDescription`.
-
-Set `criterionType` to "cost".
-
-**AC_PRICE**
-
-Add an `AwardWeightedCriterion` object to the `awardWeightedCriteria` array.
-
-Map `AC_CRITERION` to `criterionName`.
-
-Map `AC_WEIGHTING` to `criterionDescription`.
-
-Set `criterionType` to "price".
-
-**AC_PROCUREMENT_DOC**
-
-Discard.
+This model was discussed in <https://github.com/eForms/eForms/issues/119>, <https://github.com/eprocurementontology/eprocurementontology/issues/157> and <https://github.com/eprocurementontology/eprocurementontology/issues/203>.

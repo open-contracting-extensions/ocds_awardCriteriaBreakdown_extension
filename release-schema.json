@@ -1,13 +1,26 @@
 {
   "definitions": {
-    "AwardWeightedCriteria": {
-      "type": "object",
-      "title": "Award weighted criteria",
-      "description": "A weighted criterion as defined in eForms BG-707 and compatible with TED 2.0.9.",
+    "Tender": {
       "properties": {
-        "lotID": {
-          "title": "Award criterion lot identifiers",
-          "description": "Identifiers of the lots or groups of lots to which this criterion applies. If empty, criteria apply to all lots.",
+        "awardCriteriaBreakdown": {
+          "title": "Award criteria breakdown",
+          "description": "All sets of award criteria for the procurement procedure or lots.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AwardCriteria"
+          },
+          "wholeListMerge": true
+        }
+      }
+    },
+    "AwardCriteria": {
+      "title": "Award criteria",
+      "description": "Information about the award criteria. This information may differ per lot.",
+      "type": "object",
+      "properties": {
+        "relatedLots": {
+          "title": "Related lot(s)",
+          "description": "Identifiers of one or more lots, to which these criteria apply. If not set, the criteria apply to all lots.",
           "type": [
             "array",
             "null"
@@ -16,104 +29,137 @@
             "type": "string"
           }
         },
-        "awardCriteriaComplicated": {
-          "title": "Award criteria complicated",
-          "description": "When the weighting cannot be explained per criterion, a mathematical equation or any other description can be used to explain the weighting of the criteria.",
+        "weightingDescription": {
+          "title": "Complicated weighting description",
+          "description": "When the weighting cannot be expressed per criterion, the mathematical equation (or other description) that expresses the complicated (e.g. non-linear) weighting.",
           "type": [
             "string",
             "null"
           ]
         },
-        "awardCriteriaOrderJustification": {
-          "title": "Award criteria order justification",
-          "description": "Justification for only indicating the award criteria's order of importance, not their weighting.",
+        "orderJustification": {
+          "title": "Justification for order of importance",
+          "description": "The justification for only indicating the award criteria's order of importance, not their weighting.",
           "type": [
             "string",
             "null"
           ]
         },
-        "awardWeightedCriteria": {
+        "awardCriteria": {
+          "title": "Award criteria",
+          "description": "The award criteria that apply to the related lot(s).",
           "type": "array",
-          "description": "List of the criteria that applies to the selected lots or groups of lots",
-          "title": "Award weighted criteria",
           "items": {
-            "$ref": "#/definitions/AwardWeightedCriterion"
-          }
+            "$ref": "#/definitions/AwardCriterion"
+          },
+          "wholeListMerge": true
         }
       }
     },
-    "AwardWeightedCriterion": {
-      "title": "Award weighted criterion",
-      "description": "An award criterion that applies to a lot or group of lots, and that has weighting information.",
+    "AwardCriterion": {
+      "title": "Award criterion",
+      "description": "Information about the award criterion.",
       "type": "object",
       "properties": {
-        "criterionType": {
-          "title": "Criterion type",
-          "description": "The aspect of the offer that is concerned by the criterion. It uses the open [awardCriteria](https://standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria) codelist.",
+        "type": {
+          "title": "Type",
+          "description": "The aspect of the bid that the criterion concerns. It uses the open awardCriterionType codelist.",
           "type": [
             "string",
             "null"
           ],
-          "codelist": "criterionType.csv",
+          "codelist": "awardCriterionType.csv",
           "openCodelist": true
         },
-        "criterionName": {
-          "title": "Criterion name",
-          "description": "Name of the criterion.",
+        "name": {
+          "title": "Name",
+          "description": "The name of the criterion.",
           "type": [
             "string",
             "null"
           ]
         },
-        "criterionDescription": {
-          "title": "Criterion description",
-          "description": "Description of the criterion.",
+        "description": {
+          "title": "Description",
+          "description": "The description of the criterion.",
           "type": [
             "string",
             "null"
           ]
         },
-        "criterionNumber": {
-          "title": "Criterion number",
-          "description": "Number of the criterion and meaning of the number.",
-          "type": "object",
-          "$ref": "#/definitions/AwardWeightedCriterionNumber"
+        "numbers": {
+          "title": "Numbers",
+          "description": "Numbers linked to the criterion.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AwardCriterionNumber"
+          },
+          "wholeListMerge": true
         }
       }
     },
-    "AwardWeightedCriterionNumber": {
+    "AwardCriterionNumber": {
       "title": "Award criterion number",
-      "description": "The number that qualifies the weight of the criterion and its meaning.",
+      "description": "Information about a number linked to an award criterion.",
       "type": "object",
       "properties": {
         "number": {
           "title": "Number",
-          "description": "The number that qualifies the weight or priority of the criterion.",
+          "description": "The number.",
           "type": [
             "number",
             "null"
           ]
         },
-        "meaning": {
-          "title": "Meaning",
-          "description": "The meaning of the number that qualifies the weight or priority of the criterion.",
-          "codelist": "",
-          "openCodelist": false
-        }
-      }
-    },
-    "Tender": {
-      "properties": {
-        "awardWeightedCriteriaPerLot": {
-          "title": "Award weighted criteria per lot",
-          "description": "A list of weighted criteria as defined in eForms BG-707 and compatible with TED 2.0.9.",
+        "weight": {
+          "title": "Weight",
+          "description": "Whether the number is a type of weight.",
           "type": [
-            "array",
+            "string",
             "null"
           ],
-          "items": {
-            "$ref": "#/definitions/AwardWeightedCriteria"
-          }
+          "codelist": "awardCriterionWeight.csv",
+          "openCodelist": false,
+          "enum": [
+            "percentageExact",
+            "percentageRangeMiddle",
+            "decimalExact",
+            "decimalRangeMiddle",
+            "pointsExact",
+            "pointsRangeMiddle",
+            "order",
+            null
+          ]
+        },
+        "fixed": {
+          "title": "Fixed",
+          "description": "Whether the number is a fixed value.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardCriterionFixed.csv",
+          "openCodelist": false,
+          "enum": [
+            "total",
+            "unit",
+            null
+          ]
+        },
+        "threshold": {
+          "title": "Threshold",
+          "description": "Whether the number is a type of threshold.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardCriterionThreshold.csv",
+          "openCodelist": false,
+          "enum": [
+            "minimumScore",
+            "maximumBids",
+            null
+          ]
         }
       }
     }

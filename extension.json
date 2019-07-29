@@ -1,12 +1,12 @@
 {
   "name": {
-    "en": "EU weighted criteria"
+    "en": "Award criteria breakdown"
   },
   "description": {
-    "en": "This extension aims primarily at supporting criteria data formatted according to eForms data structure, but it also aims at enabling the OCDS publication of TED v2.0.9 data."
+    "en": "Adds an award criteria breakdown array to the tender object, to break down award criteria by price, cost and quality."
   },
   "documentationUrl": {
-    "en": "https://github.com/open-contracting-extensions/ocds_eu_criteria"
+    "en": "https://extensions.open-contracting.org/en/extensions/awardCriteriaBreakdown/"
   },
   "compatibility": [
     "1.1"
@@ -15,6 +15,9 @@
     "release-schema.json"
   ],
   "codelists": [
-    "criterionType.csv"
+    "awardCriterionType.csv",
+    "awardCriterionWeight.csv",
+    "awardCriterionFixed.csv",
+    "awardCriterionThreshold.csv"
   ]
 }

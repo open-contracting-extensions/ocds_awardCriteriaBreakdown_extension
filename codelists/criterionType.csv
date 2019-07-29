@@ -1,4 +1,0 @@
-Code,Title,Description,Deprecated
-price,Price,The criterion concerns the importance of the price in the evaluation of the bid.,
-cost,Cost,"The criterion concerns the importance of all the monetary implications of the proposal, possibly including the price paid to the supplier and the running costs, switching costs or other non-price costs of choosing a particular option.",
-quality,Quality,"The criterion concerns the importance of the quality of the proposal against some assessment method.",
