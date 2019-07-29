@@ -6,7 +6,7 @@
     "en": "Adds an award criteria breakdown array to the tender object, to break down award criteria by price, cost and quality."
   },
   "documentationUrl": {
-    "en": "https://extensions.open-contracting.org/en/extensions/awardCriteriaBreakdown/"
+    "en": "https://github.com/open-contracting-extensions/ocds_awardCriteria_extension"
   },
   "compatibility": [
     "1.1"
