@@ -9,7 +9,8 @@
           "items": {
             "$ref": "#/definitions/AwardCriteria"
           },
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "uniqueItems": true
         }
       }
     },
@@ -27,7 +28,8 @@
           ],
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true
         },
         "weightingDescription": {
           "title": "Complicated weighting description",
@@ -52,7 +54,8 @@
           "items": {
             "$ref": "#/definitions/AwardCriterion"
           },
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "uniqueItems": true
         }
       }
     },
@@ -94,7 +97,8 @@
           "items": {
             "$ref": "#/definitions/AwardCriterionNumber"
           },
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "uniqueItems": true
         }
       }
     },
