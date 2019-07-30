@@ -16,8 +16,8 @@
   ],
   "codelists": [
     "awardCriterionType.csv",
-    "awardCriterionWeight.csv",
     "awardCriterionFixed.csv",
-    "awardCriterionThreshold.csv"
+    "criterionWeight.csv",
+    "criterionThreshold.csv"
   ]
 }
