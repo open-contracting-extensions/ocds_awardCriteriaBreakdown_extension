@@ -8,7 +8,11 @@ In the European Union, this extension's fields correspond to [eForms BG-707 (Awa
 
 [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj) [Article 67](https://eur-lex.europa.eu/eli/dir/2014/24/oj#d1e5950-65-1)(5) describes weightings and orders of importance.
 
-## Example
+## Examples
+
+### Weight
+
+These award criteria for lots 1 and 2 are 50% service quality and 50% price.
 
 ```json
 {
@@ -37,6 +41,47 @@ In the European Union, this extension's fields correspond to [eForms BG-707 (Awa
               {
                 "number": 50,
                 "weight": "percentageExact"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Fixed
+
+The price is fixed at $100,000, such that tenderers compete on quality only.
+
+```json
+{
+  "tender": {
+    "awardCriteriaBreakdown": [
+      {
+        "awardCriteria": [
+          {
+            "type": "price",
+            "name": "Fixed price",
+            "numbers": [
+              {
+                "number": 100000,
+                "fixed": "total"
+              },
+              {
+                "number": 0,
+                "weight": "decimalExact"
+              }
+            ]
+          },
+          {
+            "type": "quality",
+            "name": "Service quality",
+            "numbers": [
+              {
+                "number": 1,
+                "weight": "decimalExact"
               }
             ]
           }
