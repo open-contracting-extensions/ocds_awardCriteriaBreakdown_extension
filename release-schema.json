@@ -23,7 +23,7 @@
             "null"
           ]
         },
-        "orderJustification": {
+        "orderRationale": {
           "title": "Justification for order of importance",
           "description": "The justification for only indicating the award criteria's order of importance, not their weighting.",
           "type": [
