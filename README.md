@@ -1,6 +1,6 @@
 # Award criteria breakdown
 
-Adds an award criteria breakdown array to the lot object, to break down award criteria by price, cost and quality.
+Adds an award criteria array to the lot object, to break down award criteria by price, cost and quality.
 
 ## Legal context
 
