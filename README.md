@@ -1,6 +1,6 @@
 # Award criteria breakdown
 
-Adds an award criteria breakdown array to the tender object, to break down award criteria by price, cost and quality.
+Adds an award criteria breakdown array to the lot object, to break down award criteria by price, cost and quality.
 
 ## Legal context
 
@@ -12,35 +12,36 @@ In the European Union, this extension's fields correspond to [eForms BG-707 (Awa
 
 ### Weight
 
-These award criteria for lots 1 and 2 are 50% service quality and 50% price.
+These award criteria are 50% service quality and 50% price.
 
 ```json
 {
   "tender": {
-    "awardCriteriaBreakdown": [
+    "lots": [
       {
-        "relatedLots": [
-          "1",
-          "2"
-        ],
+        "id": "1",
         "awardCriteria": [
           {
-            "type": "quality",
-            "name": "Service quality",
-            "numbers": [
+            "criteria": [
               {
-                "number": 50,
-                "weight": "percentageExact"
-              }
-            ]
-          },
-          {
-            "type": "price",
-            "name": "Price",
-            "numbers": [
+                "type": "quality",
+                "name": "Service quality",
+                "numbers": [
+                  {
+                    "number": 50,
+                    "weight": "percentageExact"
+                  }
+                ]
+              },
               {
-                "number": 50,
-                "weight": "percentageExact"
+                "type": "price",
+                "name": "Price",
+                "numbers": [
+                  {
+                    "number": 50,
+                    "weight": "percentageExact"
+                  }
+                ]
               }
             ]
           }
@@ -58,30 +59,35 @@ The price is fixed at $100,000, such that tenderers compete on quality only.
 ```json
 {
   "tender": {
-    "awardCriteriaBreakdown": [
+    "lots": [
       {
+        "id": "1",
         "awardCriteria": [
           {
-            "type": "price",
-            "name": "Fixed price",
-            "numbers": [
+            "criteria": [
               {
-                "number": 100000,
-                "fixed": "total"
+                "type": "price",
+                "name": "Fixed price",
+                "numbers": [
+                  {
+                    "number": 100000,
+                    "fixed": "total"
+                  },
+                  {
+                    "number": 0,
+                    "weight": "decimalExact"
+                  }
+                ]
               },
               {
-                "number": 0,
-                "weight": "decimalExact"
-              }
-            ]
-          },
-          {
-            "type": "quality",
-            "name": "Service quality",
-            "numbers": [
-              {
-                "number": 1,
-                "weight": "decimalExact"
+                "type": "quality",
+                "name": "Service quality",
+                "numbers": [
+                  {
+                    "number": 1,
+                    "weight": "decimalExact"
+                  }
+                ]
               }
             ]
           }

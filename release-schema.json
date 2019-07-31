@@ -1,36 +1,20 @@
 {
   "definitions": {
-    "Tender": {
+    "Lot": {
       "properties": {
-        "awardCriteriaBreakdown": {
-          "title": "Award criteria breakdown",
-          "description": "All sets of award criteria for the procurement procedure or lots.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AwardCriteria"
-          },
-          "wholeListMerge": true,
-          "uniqueItems": true
+        "awardCriteria": {
+          "title": "Award criteria",
+          "description": "Information about the award criteria for the lot.",
+          "type": "object",
+          "$ref": "#/definitions/AwardCriteria"
         }
       }
     },
     "AwardCriteria": {
       "title": "Award criteria",
-      "description": "Information about the award criteria. This information may differ per lot.",
+      "description": "Information about the award criteria.",
       "type": "object",
       "properties": {
-        "relatedLots": {
-          "title": "Related lot(s)",
-          "description": "Identifiers of one or more lots, to which these criteria apply. If not set, the criteria apply to all lots.",
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "type": "string"
-          },
-          "uniqueItems": true
-        },
         "weightingDescription": {
           "title": "Complicated weighting description",
           "description": "When the weighting cannot be expressed per criterion, the mathematical equation (or other description) that expresses the complicated (e.g. non-linear) weighting.",
@@ -47,9 +31,9 @@
             "null"
           ]
         },
-        "awardCriteria": {
+        "criteria": {
           "title": "Award criteria",
-          "description": "The award criteria that apply to the related lot(s).",
+          "description": "The award criteria.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/AwardCriterion"
