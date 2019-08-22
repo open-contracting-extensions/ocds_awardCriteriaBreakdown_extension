@@ -1,15 +1,5 @@
 {
   "definitions": {
-    "Tender": {
-      "properties": {
-        "awardCriteria": {
-          "title": "Award criteria",
-          "description": "Information about the award criteria for the procedure.",
-          "type": "object",
-          "$ref": "#/definitions/AwardCriteria"
-        }
-      }
-    },
     "Lot": {
       "properties": {
         "awardCriteria": {
