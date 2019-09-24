@@ -50,7 +50,7 @@
       "properties": {
         "type": {
           "title": "Type",
-          "description": "The aspect of the bid that the criterion concerns. It uses the open awardCriterionType codelist.",
+          "description": "The aspect of the bid that the criterion concerns.",
           "type": [
             "string",
             "null"
