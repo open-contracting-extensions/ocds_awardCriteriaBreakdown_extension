@@ -20,32 +20,30 @@ These award criteria are 50% service quality and 50% price.
     "lots": [
       {
         "id": "1",
-        "awardCriteria": [
-          {
-            "criteria": [
-              {
-                "type": "quality",
-                "name": "Service quality",
-                "numbers": [
-                  {
-                    "number": 50,
-                    "weight": "percentageExact"
-                  }
-                ]
-              },
-              {
-                "type": "price",
-                "name": "Price",
-                "numbers": [
-                  {
-                    "number": 50,
-                    "weight": "percentageExact"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "awardCriteria": {
+          "criteria": [
+            {
+              "type": "quality",
+              "name": "Service quality",
+              "numbers": [
+                {
+                  "number": 50,
+                  "weight": "percentageExact"
+                }
+              ]
+            },
+            {
+              "type": "price",
+              "name": "Price",
+              "numbers": [
+                {
+                  "number": 50,
+                  "weight": "percentageExact"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }
@@ -62,36 +60,34 @@ The price is fixed at $100,000, such that tenderers compete on quality only.
     "lots": [
       {
         "id": "1",
-        "awardCriteria": [
-          {
-            "criteria": [
-              {
-                "type": "price",
-                "name": "Fixed price",
-                "numbers": [
-                  {
-                    "number": 100000,
-                    "fixed": "total"
-                  },
-                  {
-                    "number": 0,
-                    "weight": "decimalExact"
-                  }
-                ]
-              },
-              {
-                "type": "quality",
-                "name": "Service quality",
-                "numbers": [
-                  {
-                    "number": 1,
-                    "weight": "decimalExact"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "awardCriteria": {
+          "criteria": [
+            {
+              "type": "price",
+              "name": "Fixed price",
+              "numbers": [
+                {
+                  "number": 100000,
+                  "fixed": "total"
+                },
+                {
+                  "number": 0,
+                  "weight": "decimalExact"
+                }
+              ]
+            },
+            {
+              "type": "quality",
+              "name": "Service quality",
+              "numbers": [
+                {
+                  "number": 1,
+                  "weight": "decimalExact"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }
