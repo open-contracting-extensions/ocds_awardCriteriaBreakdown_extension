@@ -6,7 +6,7 @@
     "en": "Adds an award criteria array to the lot object, to break down award criteria by price, cost and quality."
   },
   "documentationUrl": {
-    "en": "https://extensions.open-contracting.org/en/extensions/awardCriteriaBreakdown/"
+    "en": "https://extensions.open-contracting.org/en/extensions/awardCriteria/"
   },
   "compatibility": [
     "1.1"
