@@ -20,7 +20,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "orderRationale": {
           "title": "Justification for order of importance",
@@ -28,7 +29,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "criteria": {
           "title": "Award criteria",
@@ -38,9 +40,11 @@
             "$ref": "#/definitions/AwardCriterion"
           },
           "wholeListMerge": true,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "AwardCriterion": {
       "title": "Award criterion",
@@ -55,7 +59,8 @@
             "null"
           ],
           "codelist": "awardCriterionType.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "name": {
           "title": "Name",
@@ -63,7 +68,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -71,7 +77,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "numbers": {
           "title": "Numbers",
@@ -81,9 +88,11 @@
             "$ref": "#/definitions/AwardCriterionNumber"
           },
           "wholeListMerge": true,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "AwardCriterionNumber": {
       "title": "Award criterion number",
@@ -148,7 +157,8 @@
             null
           ]
         }
-      }
+      },
+      "minProperties": 1
     }
   }
 }

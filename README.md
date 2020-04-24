@@ -100,4 +100,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2020-04-24
+
+* Add `minProperties`, `minItems` and/or `minLength` properties.
+
 This model was discussed in <https://github.com/eForms/eForms/issues/119>, <https://github.com/eprocurementontology/eprocurementontology/issues/157> and <https://github.com/eprocurementontology/eprocurementontology/issues/203>. This extension was originally discussed as part of the [OCDS for EU profile](https://github.com/open-contracting-extensions/european-union/issues), in [pull requests](https://github.com/open-contracting-extensions/ocds_awardCriteria_extension/pulls?q=is%3Apr+is%3Aclosed) and in <https://github.com/open-contracting/standard/issues/443>.
