@@ -9,6 +9,15 @@
         }
       }
     },
+    "LotGroup": {
+      "properties": {
+        "awardCriteria": {
+          "title": "Award criteria",
+          "description": "Information about the award criteria for the lot.",
+          "$ref": "#/definitions/AwardCriteria"
+        }
+      }
+    },
     "AwardCriteria": {
       "title": "Award criteria",
       "description": "Information about the award criteria.",
