@@ -4,7 +4,7 @@ Adds an award criteria array to the `Lot` and `LotGroup` objects, to break down 
 
 ## Legal context
 
-In the European Union, this extension's fields correspond to [eForms BG-707 (Award Criteria)](https://github.com/eForms/eForms). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for the correspondences to eForms fields. See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
+In the European Union, this extension's fields correspond to [eForms BG-707 (Award Criteria)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for the correspondences to eForms fields. See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
 
 [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj) [Article 67](https://eur-lex.europa.eu/eli/dir/2014/24/oj#d1e5950-65-1)(5) describes weightings and orders of importance.
 
