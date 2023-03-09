@@ -134,7 +134,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2022-02-27
 
-* Add `LotGroup.awardCriteria`.
+* Add `LotGroup.awardCriteria` field.
 
 ### 2020-04-24
 
