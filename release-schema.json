@@ -94,7 +94,7 @@
           "description": "Numbers linked to the criterion.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/AwardCriterionNumber"
+            "$ref": "#/definitions/CriterionNumber"
           },
           "wholeListMerge": true,
           "uniqueItems": true,
@@ -103,9 +103,9 @@
       },
       "minProperties": 1
     },
-    "AwardCriterionNumber": {
-      "title": "Award criterion number",
-      "description": "Information about a number linked to an award criterion.",
+    "CriterionNumber": {
+      "title": "Criterion number",
+      "description": "Information about a number linked to a criterion.",
       "type": "object",
       "properties": {
         "number": {
