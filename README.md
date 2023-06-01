@@ -134,7 +134,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2022-04-25
 
-* Rename AwardCriterionNumber to `CriterionNumber` and update descriptions in "criterionThreshold.csv"
+* Rename AwardCriterionNumber to `CriterionNumber` and update descriptions in `criterionThreshold.csv`
 
 ### 2022-02-27
 
