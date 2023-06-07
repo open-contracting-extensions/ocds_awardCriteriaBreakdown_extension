@@ -132,6 +132,11 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2022-04-25
+
+* Add requests to participate to `criterionThreshold.csv` code descriptions.
+* Generalize AwardCriterionNumber to `CriterionNumber` for reuse in other extensions.
+
 ### 2022-02-27
 
 * Add `LotGroup.awardCriteria` field.
