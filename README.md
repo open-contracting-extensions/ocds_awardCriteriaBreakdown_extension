@@ -132,6 +132,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2024-01-16
+
+* Update language in `criterionThreshold.csv` code descriptions to refer to expressions of interest.
+
 ### 2022-04-25
 
 * Add requests to participate to `criterionThreshold.csv` code descriptions.
