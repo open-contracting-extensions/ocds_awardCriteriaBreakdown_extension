@@ -134,7 +134,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2022-04-25
 
-* Add expressions of interest to `criterionThreshold.csv` code descriptions.
+* Add expressions of interest to the `criterionThreshold.csv` code descriptions.
 * Generalize AwardCriterionNumber to `CriterionNumber` for reuse in other extensions.
 
 ### 2022-02-27
